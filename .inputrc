@@ -1,0 +1,86 @@
+#\C-x\C-r : reload .inputrc
+#bind -f ~/.inputrc
+
+# ファイルタイプをカラフルに
+set colored-stats on
+# 補完の接頭辞をカラフルに
+set colored-completion-prefix on
+# 実行ファイルに印を付ける
+# set visible-stats on
+# 1回めで補完を表示
+# set show-all-if-ambiguous on
+
+$if Bash
+# 補完時に大文字小文字を無視
+set completion-ignore-case on
+
+#-----------------------------------
+set keymap emacs
+"\C-x\C-r": re-read-init-file
+
+# tcsh-like key binding
+"\M-p": history-search-backward
+"\M-n": history-search-forward
+"\ep": history-search-backward
+"\en": history-search-forward
+"\C-k\C-k": kill-line
+"\C-k\C-l": kill-whole-line
+
+# etc
+"\C-x\"": "\"\"\C-b"
+"\C-x\'": "\'\'\C-b"
+"\C-xq": "\eb\"\ef\""
+"\C-xQ": "\eb\'\ef\'"
+"\C-xg": "| grep "
+"\C-xl": "\C-e | less\C-m"
+"\C-xc": "cat "
+"\C-xs":"\C-asudo \C-e"
+"\C-xh":"history "
+
+#-----------------------------------
+# Use Vi, not Emacs, style editing
+#-----------------------------------
+# set editing-mode vi
+
+#-----------------------------------
+set keymap vi-command
+"\C-x\C-r": re-read-init-file
+
+# etc
+"\C-x\"": "\C-z\C-x\"\C-z"
+"\C-x\'": "\C-z\C-x\'\C-z"
+"\C-xq": "\C-z\C-xq\C-z"
+"\C-xQ": "\C-z\C-xQ\C-z"
+"\C-xg": "\C-z\C-xg\C-z"
+"\C-xl": "\C-z\C-xl\C-z"
+"\C-xc": "\C-z\C-xc\C-z"
+"\C-xs": "\C-z\C-xs\C-z"
+"\C-xh": "\C-z\C-xh\C-z"
+#--
+"\C-l": clear-screen
+
+#-----------------------------------
+set keymap vi-insert
+"jj": vi-movement-mode
+"\C-x\C-r": re-read-init-file
+
+# etc
+"\C-x\"": "jj\C-z\C-x\"\C-z"
+"\C-x\'": "jj\C-z\C-x\'\C-z"
+"\C-xq": "jj\C-z\C-xq\C-z"
+"\C-xQ": "jj\C-z\C-xQ\C-z"
+"\C-xg": "jj\C-z\C-xg\C-z"
+"\C-xl": "jj\C-z\C-xl\C-z"
+"\C-xc": "jj\C-z\C-xc\C-z"
+"\C-xs": "jj\C-z\C-xs\C-z"
+"\C-xh": "jj\C-z\C-xh\C-z"
+#--
+"\C-l": clear-screen
+
+# for vi mode
+# set show-mode-in-prompt on
+# set vi-ins-mode-string \1\e[34;1m\2(ins) \1\e[0m\2
+# set vi-cmd-mode-string \1\e[31;1m\2(cmd) \1\e[0m\2
+
+$endif
+

@@ -1,0 +1,8 @@
+# ディレクトリの末尾にスラッシュをつけてはいけない
+.bashrc
+.bash_aliases
+.inputrc
+.vimrc
+.tmux.conf
+.tmux.session.conf
+#bin
