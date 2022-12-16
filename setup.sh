@@ -4,7 +4,7 @@ set -Ceuo pipefail
 # BACKUP_NAME=$(date +%Y%m%d-%H%M-%S)
 readonly SCRIPT_DIR=$(cd $(dirname $0);pwd)
 readonly SCRIPT_NAME=$(basename $0)
-readonly BACKUP_NAME="test"
+readonly BACKUP_NAME="ent"
 readonly BACKUP_DIR="${HOME}/backup/dotfiles"
 readonly BACKUP_PATH=${BACKUP_DIR}/${BACKUP_NAME}
 readonly LOG_FILE="${BACKUP_DIR}/log.txt"
@@ -64,7 +64,6 @@ restore()
 setup()
 {
   read -p "setup: ok?[Y/n]>" ans; [[ ! $ans =~ ^$|(^Y|y$) ]] && exit
-  mkdir -vp ${BACKUP_PATH}
 
   echo '=================='
   echo ' setup dotfiles :'"$(date)"
@@ -103,6 +102,8 @@ setup()
   echo -e "end\n"
 }
 
+mkdir -vp ${BACKUP_PATH}
+touch $LOG_FILE
 (if [ $# -eq 0 ]; then
   setup
 elif [ $1 = '-r' ]; then
