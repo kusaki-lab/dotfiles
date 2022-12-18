@@ -133,6 +133,9 @@ stty discard undef  # dismiss Ctrl-o
 #===================================
 HISTIGNORE='history :upd:hc:tmux:ba:hds:clear'
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 [ -f ~/.anime/shell/.anime.bash ] && source ~/.anime/shell/.anime.bash
+
+
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

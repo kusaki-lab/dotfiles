@@ -5,6 +5,10 @@ alias ba='. ~/.bash_aliases'
 alias lcl='lxc ls -c ns4DtS'
 alias h-del-prev='history -d $(history |tail -n2|head -n1| sed "s/\*//; s/ *//; s/ .*$//")'
 alias tree='tree -a -I "\.git"'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ..h='cd ${HOME}'
+alias ..d='cd ${HOME}/src/dotfiles'
 
 #=========================================
 # functions
