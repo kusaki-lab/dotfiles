@@ -9,6 +9,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ..h='cd ${HOME}'
 alias ..d='cd ${HOME}/src/dotfiles'
+alias tre='tree -aU -I "\.git"'
 
 #=========================================
 # functions
