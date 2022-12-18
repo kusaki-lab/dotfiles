@@ -163,6 +163,9 @@ vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 
 "-------------
+call dein#add('nanotech/jellybeans.vim')
+
+"-------------
 " call dein#add('')
 
 "-------------------------------------------------
@@ -226,9 +229,7 @@ set ignorecase
 set smartcase
 set whichwrap=b,s,[,],<,>,~,h,l
 set hlsearch
-if filereadable(expand('~/.vim/colors/jellybeans.vim'))
-  colorscheme jellybeans
-endif
+colorscheme jellybeans
 hi Search ctermbg=DarkCyan
 hi Search ctermfg=white
 set cursorline
