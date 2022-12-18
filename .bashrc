@@ -132,7 +132,7 @@ stty discard undef  # dismiss Ctrl-o
 #===================================
 # history ignore commands
 #===================================
-HISTIGNORE='history :upd:hc:tmux:ba:hds:clear'
+HISTIGNORE='history :upd:hc:tmux:ba:hds:clear:ll:..h:..d'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 

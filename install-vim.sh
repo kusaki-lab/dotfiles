@@ -16,6 +16,7 @@ function install_vim(){
 function install_dein(){
   curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
   sh ./installer.sh ~/.cache/dein
+  rm ./installer.sh
 }
 function _uninstall(){
     echo "not imple!"
