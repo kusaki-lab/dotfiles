@@ -18,7 +18,7 @@ restore()
     echo 'no backup folder' "[${BACKUP_PATH}]"
     exit
   fi
-  if [ $(find backup/ -type f | wc -l) -eq 0 ]; then
+  if [ $(find ${BACKUP_PATH} -type f | wc -l) -eq 0 ]; then
     echo 'no backup files'
     exit
   fi

@@ -1,3 +1,4 @@
+# ############
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -133,9 +134,6 @@ stty discard undef  # dismiss Ctrl-o
 #===================================
 HISTIGNORE='history :upd:hc:tmux:ba:hds:clear'
 
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 [ -f ~/.anime/shell/.anime.bash ] && source ~/.anime/shell/.anime.bash
-
-
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
