@@ -5,11 +5,21 @@ alias hgrep='history |grep -v grep |grep'
 alias ba='. ~/.bash_aliases'
 alias lcl='lxc ls -c ns4DtS'
 alias h-del-prev='history -d $(history |tail -n2|head -n1| sed "s/\*//; s/ *//; s/ .*$//")'
+
 alias ..='cd ..'
 alias ...='cd ../..'
-alias ..h='cd ${HOME}'
-alias ..d='cd ${HOME}/src/dotfiles'
+alias cd..='cd ..'
+alias cdh='cd ${HOME}'
+alias cdd='cd ${HOME}/src/dotfiles'
+
+alias reload='exec $SHELL -l'
+
 alias tre='tree -aU -I "\.git"'
+
+alias gs='git status'
+alias gc='git commit -m'
+alias ga='git add'
+alias gp='git push'
 
 #=========================================
 # functions
