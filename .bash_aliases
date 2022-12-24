@@ -4,7 +4,7 @@ alias psgrep='ps ax |grep -v grep |grep'
 alias hgrep='history |grep -v grep |grep'
 alias ba='. ~/.bash_aliases'
 alias lcl='lxc ls -c ns4DtS'
-alias h-del-prev='history -d $(history |tail -n2|head -n1| sed "s/\*//; s/ *//; s/ .*$//")'
+alias h-del-prev='history -d $(history 2 | head -n1 | awk "{print \$1}")'
 
 alias ..='cd ..'
 alias ...='cd ../..'
